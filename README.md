@@ -1,9 +1,11 @@
 
 # django-singleton
 
-## django-singleton is a fork of Thomas Ashelford's [django-singletons](https://github.com/tttallis/django-singletons).
+django-singleton is a fork of Thomas Ashelford's [django-singletons](https://github.com/tttallis/django-singletons).
 
-I forked his code to include Django 1.4 compatibility, as well as to remove the delete button within the admin.  I had to rename the repository so that I could submit this to the Python Package Index.
+I forked his code to include Django 1.4 compatibility, as well as to remove the delete button within the admin (see credit below).  I had to rename the repository so that I could submit this to the Python Package Index.
+
+[Code from Chris Church's fork](https://github.com/ninemoreminutes/django-singletons/commit/9b231666b9027d3bd1159f3db8bce34701193bdd) - I am merely synthesizing all this..
 
 
 ## In Thomas's words
@@ -19,7 +21,7 @@ I suspect I have cadged some of this code from someone else (likely ex-colleague
 
 ### Installation
 
-pip install django-singletons
+    pip install django-singleton
 
 To get the custom admin templates working, you need to add "singleton_models" to your INSTALLED_APPS
 
@@ -28,23 +30,22 @@ To get the custom admin templates working, you need to add "singleton_models" to
 
 in models.py
 
-
-from singleton_models.models import SingletonModel
-
-class HomePage(SingletonModel):
-    welcome = models.TextField()
+    from singleton_models.models import SingletonModel
     
-    def __unicode__(self):
-        return u"The Home Page" # something like this will make admin message strings more coherent
+    class HomePage(SingletonModel):
+        welcome = models.TextField()
         
-    class Meta:
-        verbose_name = "Home Page" # once again this will make sure your admin UI doesn't have illogical text
-        verbose_name_plural = "Home Page"
+        def __unicode__(self):
+            return u"The Home Page" # something like this will make admin message strings more coherent
+            
+        class Meta:
+            verbose_name = "Home Page" # once again this will make sure your admin UI doesn't have illogical text
+            verbose_name_plural = "Home Page"
 
 
 in admin.py
 
-from singleton_models.admin import SingletonModelAdmin
-from models import HomePage
-        
-admin.site.register(HomePage, SingletonModelAdmin)
+    from singleton_models.admin import SingletonModelAdmin
+    from models import HomePage
+            
+    admin.site.register(HomePage, SingletonModelAdmin)
