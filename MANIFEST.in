@@ -1,2 +1,2 @@
-include README.txt
+include README.md
 include singleton_models/templates/admin/singleton_models/change_form.html

@@ -1,3 +1,13 @@
+
+# django-singleton
+
+## django-singleton is a fork of Thomas Ashelford's [django-singletons](https://github.com/tttallis/django-singletons).
+
+I forked his code to include Django 1.4 compatibility, as well as to remove the delete button within the admin.  I had to rename the repository so that I could submit this to the Python Package Index.
+
+
+## In Thomas's words
+
 I keep finding myself re-using this simple bit of code, so I thought I should open-source it, even though it's not much more than a snippet.
 
 A SingletonModel is a django model that only ever has one record. You can't use the admin to create a new instance, or delete the existing one.
@@ -6,15 +16,15 @@ Some might argue that singleton models are an inefficient way of using a relatio
 
 I suspect I have cadged some of this code from someone else (likely ex-colleague http://github.com/jphalip/), but a quick Google doesn't show up anything like this already out there. So here it is. I hope you find it useful.
 
-Installation
-------------
+
+### Installation
 
 pip install django-singletons
 
 To get the custom admin templates working, you need to add "singleton_models" to your INSTALLED_APPS
 
-Example Usage
--------------
+
+### Example Usage
 
 in models.py
 
