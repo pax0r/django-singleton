@@ -13,7 +13,7 @@ class SingletonModelAdmin(admin.ModelAdmin):
         """ Singleton pattern: prevent addition of new objects """
         return False
 
-    def has_delete_permission(self, request):
+    def has_delete_permission(self, request, obj=None):
         """ Singleton pattern: prevent deletion of The One object."""
         return False
 
