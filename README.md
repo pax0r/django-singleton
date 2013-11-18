@@ -1,4 +1,3 @@
-
 # django-singleton
 
 django-singleton is a fork of Thomas Ashelford's [django-singletons](https://github.com/tttallis/django-singletons).
@@ -6,6 +5,9 @@ django-singleton is a fork of Thomas Ashelford's [django-singletons](https://git
 I forked his code to include Django 1.4 compatibility, as well as to remove the delete button within the admin (see credit below).  I had to rename the repository so that I could submit this to the Python Package Index.
 
 [Code from Chris Church's fork](https://github.com/ninemoreminutes/django-singletons/commit/9b231666b9027d3bd1159f3db8bce34701193bdd) - I am merely synthesizing all this..
+
+# pax0r's notes:
+I forked it to add Django 1.6 compatibility
 
 
 ## In Thomas's words
